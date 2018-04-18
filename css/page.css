@@ -1,0 +1,109 @@
+@charset "UTF-8";
+html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, p, span, a, img, form, fieldset, label, table, th, td, .btn, .rbtn {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+img {
+  vertical-align: middle;
+  border: 0; }
+
+input {
+  vertical-align: middle; }
+
+input:focus {
+  outline: none; }
+
+button {
+  outline: none;
+  border: 0; }
+
+i {
+  display: inline-block; }
+
+.cl:after {
+  content: "";
+  display: block;
+  oveerflow: hidden;
+  clear: both;
+  height: 0;
+  visibility: hidden; }
+
+.cl {
+  zoom: 1; }
+
+body {
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  font-family: '微软雅黑';
+  color: #666;
+  overflow-x: hidden; }
+  body a {
+    font-size: 14px;
+    font-family: '微软雅黑';
+    color: #666; }
+  body a:hover {
+    color: red; }
+  body .sidebar {
+    display: none; }
+  body .all:hover + .sidebar {
+    display: block; }
+  body .magnifying {
+    height: 482px;
+    width: 482px;
+    border: 1px solid #eaeaea;
+    position: relative; }
+    body .magnifying #s_box {
+      height: 482px;
+      width: 482px;
+      position: relative; }
+      body .magnifying #s_box .mark_box {
+        width: 480px;
+        height: 480px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 10; }
+    body .magnifying img {
+      margin: auto;
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0; }
+    body .magnifying .position_box {
+      width: 240px;
+      height: 240px;
+      background: #b6b6b6;
+      opacity: 0.6;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 1;
+      display: none; }
+    body .magnifying #b_box {
+      overflow: hidden;
+      position: relative;
+      left: 529px;
+      top: -478px;
+      width: 482px;
+      height: 482px;
+      border: 1px solid #333;
+      display: none; }
+    body .magnifying #b_box_all {
+      position: absolute;
+      width: 1000px;
+      height: 1000px;
+      left: 0; }
+      body .magnifying #b_box_all img {
+        width: 100%;
+        height: 100%; }
+  body .goodsCon {
+    width: 490px;
+    z-index: -1;
+    position: relative;
+    float: left; }

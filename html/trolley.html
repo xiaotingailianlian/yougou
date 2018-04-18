@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>购物车</title>
+		<link rel="stylesheet" href="../css/trolley.css">
+		<script src = "../js/jquery-1.10.1.min.js"></script>
+		<script src="../js/trolley.js" async="true" defer data-main ="../js/main"></script>
+        
+	</head>
+	<body>
+		<!-- 头部导航 -->
+		<div id="top_nav">
+            <div class="top_box">
+                <span class="top_one">
+                    <a href="./index.html" class="top_oneA1">时尚商城</a>|
+                <span>
+                <span class="phone top_one">
+                    <a href="http://www.yougou.com/topics/mobile.html" class="phone_text"><i class="mobile_ico"></i>手机优购<i class="tip"></i></a>
+                    <!-- hover下拉 -->
+                    <div class="drop">
+                        <p>
+                            <span class="ewm"></span>
+                            <a href="https://itunes.apple.com/cn/app/zhang-shang-you-gou/id504493912?mt=8"><span class="sidebar"></span></a>
+                        </p>
+                        <p>
+                            下载安装<strong>优购客户端</strong>
+                        </p>
+                    </div>
+                </span>
+                <span class="register">
+                    <a href="./register.html" class="register_1">登录</a>
+                    <a href="./login.html" class="register_2">注册</a>
+                </span>
+                <ul class="top_foot">
+                    <li class="one"><a href="#" class="border">|&emsp;我的优购</a>
+                         <div class="one_hover"><a href="#" class="a">我的收藏</a></div>
+                    </li>
+                    <li class="two"><a href="#">|&emsp;我的订单</a></li>
+                    <li class="three"><a href="#">|&emsp;公告</a>
+                        <div class="affiche">
+                            <span class="one_span"><a target="_blank" href="http://www.yougou.com/topics/1416561897997.html#ref=index&amp;po=notice_notice1">运动新风尚 新品5折起</a></span><br/>
+                            <span><a target="_blank" href="http://www.yougou.com/topics/1415597386968.html#ref=index&amp;po=notice_notice2">摩登男装 秋冬大促 1折起</a></span><br/>
+                            <span><a target="_blank" href="http://www.yougou.com/topics/1415597386968.html#ref=index&amp;po=notice_notice2">摩登男装 秋冬大促 1折起</a></span><br/>
+                            <span><a target="_blank" href="http://www.yougou.com/topics/1416561897997.html#ref=index&amp;po=notice_notice1">运动新风尚 新品5折起</a></span><br/>
+                            <span class="two_span"><a target="_blank" href="http://www.yougou.com/topics/1415597386968.html#ref=index&amp;po=notice_notice2">摩登男装 秋冬大促 1折起</a></span><br/>
+                        </div>
+                    </li>
+                    <li class="four"><a href="#">|&emsp;更多</a>
+                        <div class="help">
+                            <a href="#">收藏优购</a>
+                            <a href="#">帮助</a>
+                        </div>
+                    </li>
+                </ul>                
+            </div>
+        </div>
+        <!-- 优购logo -->
+        <div class="logo">
+			<a href="http://www.yougou.com/"><h1></h1></a>
+			<div class="logo_head">
+				<ul>
+					<li class="active logoLi_1">
+						<a href="#">我的购物车</a>
+						<em></em>
+						<i></i>
+					</li>
+					<li class="logoLi_2">
+						<a href="#">提交订单中心</a>
+						<em></em>
+						<i></i>
+					</li>
+					<li class="logoLi_3">
+						<a href="#">成功提交订单</a>
+
+					</li>
+				</ul>
+			</div>
+        </div>
+        <!-- 购物车内容 -->
+        <!-- 若所有购物车均为空提示一下内容   -->
+		<!-- 普通购物车 -->
+        <div id="shoppingCartContainer">
+			<div class="cen shoppingCart_box mt20">
+			<!-- 购物车为空时显示以下页面 -->
+				<div class="cen mt10 cart_null_div">
+					<div class="bd clearfix cl">
+				        <i class="cart_null_icon fl"></i>
+				        <div class="fl">
+				            <p class="cart_null_txt f14 cgray">
+				            您的购物车中暂无商品，赶快选择心爱的商品吧！
+				            </p>
+				            <p class="mt10">
+				                <a href="#" class="gohome_btn">回到首页</a>
+				            </p>
+				            <p class="mt10">
+				                您可以：<br/>
+				                查看<a href="/my/favorites.jhtml" style="color:blue">我的收藏夹</a><br/>
+				                查看<a href="/my/order.jhtml" style="color:blue">我已购买的商品</a>
+				            </p>
+				        </div>
+				    </div>
+				</div>
+			    <!-- <table class="shoppingCart_tb">
+			        <colgroup>
+			            <col width="60">
+			            <col width="370">
+			            <col width="110">
+			            <col width="110">
+			            <col width="110">
+			            <col width="110">
+			            <col width="120">
+			        </colgroup> -->
+		<!-- 当购物车有东西时
+			        <!-- <thead>
+				        <tr>
+				            <th>
+								<label name="CNYcheckAllLabel" class="ygChkbox">
+				                    <input class="none" type="checkbox" id="CNYcheckStartAll" name="CNYcheckAll"
+				                           checked="checked">
+				                    <i class="skin fl mt5 ml20 checked"></i>
+				                    	全选
+				                </label>
+				            </th>
+				            <th>
+				                <span class="pr25">商品名称</span>
+				            </th>
+				            <th>颜色尺码</th>
+				            <th>单价</th>
+				            <th>数量</th>
+				            <th>小计(元)</th>
+				            <th>操作</th>
+				        </tr>
+				    </thead>
+				    <tbody>
+				        <tr>
+				            <td id="tr_td" colspan="7">
+				                <input type="hidden" value="1" id="productRecordNum">
+				                <input type="hidden" value="0" id="productGiftRecordNum" value="0">
+				                <input type="hidden" value="1" id="orderCommNum">
+
+							<! </td>
+						</tr>
+					</tbody>
+
+
+			    </table> -->
+			</div>
+		</div>
+		<!-- 下面公共部分 -->
+		<div class="clearfix cen mt15">
+		    <div class="fr cgray cart_btinfo">
+		        <p class="cart_bz">
+		            购物保障：<i class="icon_zp"></i>100%正品<i class="icon_thh"></i>10天退换货<i class="icon_bcj"></i>10天补差价
+		        </p>
+		        <p>优惠券/礼品卡在下一步使用</p>
+		        <p><a href="/shoppingcart/shoppingcart_advise.jhtml" target="_blank" class="cgray">帮助我们改进购物流程</a></p>
+		    </div>
+			<!--凑单提醒start-->
+			<div class="cen uc_main mt30">
+		        <h3 class="f16 c6 f_yahei">购买了您购物车中商品的顾客还买了</h3>
+		        <div class="cart_recpro">
+		            <div class="uc_slide uc_cnlike 
+		             zdtx">
+		                <div class="slide_hd">
+		                	<h2></h2>
+		                </div>
+		                <div class="slide_bd">
+		                   <!--  <a class="slide_lf abs" href="javascript:void(0);"></a>
+		                    <a class="slide_rt abs" href="javascript:void(0);"></a> -->
+		                    <p class="slide_page abs">第<span>1</span>页，共 0 页</p>
+		                    
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+			        
+	</body>
+</html>
